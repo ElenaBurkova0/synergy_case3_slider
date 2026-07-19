@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер изображений</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider">
+        <h1>Галерея</h1>
+        
+        <div class="slider-frame" id="sliderFrame">
+            <div class="slides" id="slides">
+                <div class="slide clone">
+                    <img src="images/image5.jpg" alt="Клон 5">
+                </div>
+                
+                <div class="slide">
+                    <img src="images/image1.jpg" alt="Изображение 1">
+                </div>
+                <div class="slide">
+                    <img src="images/image2.jpg" alt="Изображение 2">
+                </div>
+                <div class="slide">
+                    <img src="images/image3.jpg" alt="Изображение 3">
+                </div>
+                <div class="slide">
+                    <img src="images/image4.jpg" alt="Изображение 4">
+                </div>
+                <div class="slide">
+                    <img src="images/image5.jpg" alt="Изображение 5">
+                </div>
+                
+                <div class="slide clone">
+                    <img src="images/image1.jpg" alt="Клон 1">
+                </div>
+            </div>
+            
+            <button class="btn prev" id="prev">❮</button>
+            <button class="btn next" id="next">❯</button>
+        </div>
+        
+        <div class="info" id="info">Изображение 1 из 5</div>
+        <div class="dots" id="dots"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
