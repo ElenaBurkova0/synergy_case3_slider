@@ -1,0 +1,168 @@
+/* Подключение шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Futura+PT:wght@300;400;500;700&display=swap');
+
+/* Глобальный сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили страницы */
+body {
+    font-family: 'Futura PT', 'Futura', 'Arial', sans-serif;
+    background: rgb(223, 230, 221);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Основной контейнер слайдера */
+.slider {
+    background: white;
+    padding: 20px 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Заголовок */
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-family: 'Futura PT', 'Futura', 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Область отображения слайдов */
+.slider-frame {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f5f5f5;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+/* Контейнер слайдов (трек) */
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Отдельный слайд */
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Изображение внутри слайда */
+.slide img {
+    width: auto;
+    height: auto;
+    max-width: 95%;
+    max-height: 95%;
+    display: block;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* Кнопки навигации */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    padding: 12px 18px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    color: #333;
+    z-index: 10;
+    line-height: 1;
+    font-family: 'Futura PT', 'Futura', 'Arial', sans-serif;
+}
+
+/* Кнопки при наведении */
+.btn:hover {
+    background: rgb(188, 253, 211);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+}
+
+/* Кнопки при нажатии */
+.btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Позиционирование кнопок */
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Текстовая информация о текущем слайде */
+.info {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #555;
+    font-weight: 400;
+    font-family: 'Futura PT', 'Futura', 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Контейнер точек пагинации */
+.dots {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Отдельная точка пагинации */
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+/* Точка при наведении */
+.dot:hover {
+    transform: scale(1.2);
+}
+
+/* Активная точка */
+.dot.active {
+    background: #667eea;
+    border-color: #667eea;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(102,126,234,0.3);
+}
+
+
